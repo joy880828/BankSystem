@@ -31,8 +31,6 @@ public class AccountTest
 			continue; //迴圈重新開始
 		}	
 			
-			
-			
 		switch(cmd) //根據使用者輸入的數字，執行對應的功能
 		{
 		case "1":
@@ -41,12 +39,16 @@ public class AccountTest
 					
 			try
 			{
-			 initM = scanner.nextDouble(); //讓使用者輸入初始金額
-			 if(initM>=1000.0) //若>1000才開戶
-			 {
-				 Account account = new Account(initM); //建構式，創造新的帳戶
-				 System.out.println("開戶成功！帳戶目前有" +account.checkMoney());
-			 }
+				 initM = scanner.nextDouble(); //讓使用者輸入初始金額
+				 if(initM>=1000.0) //若>1000才開戶
+				 {					 
+					 Account account = new Account(initM); //建構式，創造新的帳戶
+					 System.out.println("開戶成功！帳戶目前有" +account.checkMoney()); 
+				 }
+				else  //即金額不足1000時
+				 {
+					 System.out.println("開戶失敗！金額必須大於1000！");
+				 }
 			}
 			catch(Exception e) //若使用者輸入的不是數字，則會產生Exception
 			{
