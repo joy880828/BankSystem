@@ -45,6 +45,7 @@ public class AccountTest
 			 if(initM>=1000.0) //若>1000才開戶
 			 {
 				 Account account = new Account(initM); //建構式，創造新的帳戶
+				 System.out.println("開戶成功！帳戶目前有" +account.checkMoney());
 			 }
 			}
 			catch(Exception e) //若使用者輸入的不是數字，則會產生Exception
