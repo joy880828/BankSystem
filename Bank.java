@@ -26,7 +26,7 @@ public class AccountTest
 		{
 			 cmd = scanner.nextLine(); //讓使用者輸入想要的功能代碼
 			 cmd_int = Integer.parseInt(cmd); /*將其轉為整數，若失敗則會拋出
-			 									NumberFormatException*/
+			 				NumberFormatException*/
 		}
 		catch(NumberFormatException e)
 		{
